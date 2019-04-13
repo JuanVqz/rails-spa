@@ -2,6 +2,9 @@ require 'rails_helper'
 
 RSpec.describe CategoriesController, type: :controller do
 
+  let(:user) { create :user, password: '123123123' }
+  let(:token) { token_generator(user.id) }
+
   let(:movies) do
     [
       attributes_for(:movie, name: "La sombra del amor", year: 2000),
@@ -24,6 +27,8 @@ RSpec.describe CategoriesController, type: :controller do
       movies_attributes: movies
     }
   end
+
+  before { request.headers['HTTP_AUTHORIZATION'] = token }
 
   describe "GET #index" do
     it "returns a success response" do
