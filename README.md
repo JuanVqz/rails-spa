@@ -33,12 +33,33 @@ La explicación de esté código se encuentra [aquí.](https://www.youtube.com/w
 
 15.- [agregando token a las categorias](https://www.youtube.com/watch?v=fE8KVqDsDpg&list=PL4yLj0azo9NU-qUCvSUZSm92gdxFJAWRc&index=15)
 
-## Instalación e iniciar el servidor
+## Instalación
+
+Cuando clonas el proyecto se deben **crear nuevas credenciales** por que no se sube
+el archivo `master.key`.
+
 ```sh
 git clone https://github.com/JuanVqz/rails-spa.git
 cd rails-spa
 bundle install
 
+rm config/credentials.yml.enc
+EDITOR=vim rails credentials:edit
+// guardar y salir del editor
+```
+
+## Ejecutar las pruebas
+
+Es bueno ejecutar las pruebas despues de la instalación para asegurar que todo
+funciona adecuadamente.
+
+```sh
+rake
+```
+
+# Iniciar el servidor
+
+```sh
 rails db:create
 rails db:migrate
 
@@ -46,6 +67,7 @@ rails serve
 ```
 
 ## Versiones
+
  * Ruby 2.5.3
  * Rails 5.2.2
 
