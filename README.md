@@ -57,14 +57,22 @@ funciona adecuadamente.
 rake
 ```
 
-# Iniciar el servidor
+## Iniciar el servidor
 
 ```sh
 rails db:create
 rails db:migrate
+rails db:seed // opcional
 
 rails serve
 ```
+
+## Usuario creado con los seeds
+
+Usuario: usuario@gmail.com
+
+Contraseña: 123456
+
 
 ## Versiones
 

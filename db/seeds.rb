@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+user = User.create! name: "usuario", email: "usuario@gmail.com", password: "123456"
+puts "Usuario: #{user.email} Contraseña: 123456"
+
 terror = Category.create!(name: "Terror", description: "El cine de terror es un género cinematográfico que se caracteriza por su voluntad de provocar en el espectador sensaciones de pavor, terror, miedo, disgusto, repugnancia, horror, incomodidad o preocupación.")
 accion = Category.create!(name: "Acción", description: "Los elementos más frecuentes de una película de acción son persecuciones, tiroteos, feroces batallas entre humanos o animales, artes marciales y luchas callejeras, armas de fuego y cuchillos, explosiones, robos, secuestros, asaltos y cualquier otra cosa que genere adrenalina.")
 musical = Category.create!(name: "Musical", description: "El cine musical alude a todas aquellas producciones cinematográficas que incluyen canciones.")
